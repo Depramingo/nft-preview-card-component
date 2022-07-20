@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    /* NOW I REALLY understand what these two do, removing the default margin and padding, 
+    makes the page look better and easier to control*/
+    box-sizing: border-box;
+    /* paddin INSIDE da box, margin outsiiigh xD*/
+}
+
+:root {
+    /* I didn't use this before, creating variales inside the root dir to use 'em everywhere else, cool */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* ### Neutral */
+
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+img {
+    max-width: 100%;
+    /* NOT width, So far I THINK max-width only used for images? google it/ask */
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background-color: var(--main-bg);
+    /* Aaand this is how u use dem variables, cool cool cool cool cool co.. */
+    color: hsl(0, 0%, 100%, 60%);
+    padding: 1.25rem;
+    /* the basic centering styles */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    /* border: 3px solid red; */
+    width: 22rem;
+    background-color: var(--card-bg);
+    padding: 1.6rem;
+    border-radius: 1rem;
+}
+
+.card .equilibrium h1 {
+    color: var(--white);
+    font-size: 1.4em;
+    margin: 1rem 0;
+}
+
+.card ul {
+    /* remove the dots */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.card ul li {
+    display: flex;
+    align-items: center;
+}
+
+.card ul li img {
+    margin-right: 0.4rem;
+}
+
+.card ul li:first-child {
+    color: var(--Cyan);
+}
+
+.card .creator {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.card .creator img {
+    width: 2.5rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.card .equilibrium img {
+    border-radius: 0.5rem;
+}
+
+p {
+}
+
+.attribution {
+    font-size: 12px;
+    /* the following properties are called a "footer block", forcing the footer to always stay in the bottom of the page, learned from w3schools */
+    position: fixed;
+    left: 0;
+    bottom: 0.5rem;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 500px) {
+    .card {
+        width: 24rem;
+    }
+}
