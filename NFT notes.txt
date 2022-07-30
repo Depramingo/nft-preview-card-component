@@ -1,0 +1,23 @@
+Position property (Position:)
+
+static;
+	The default value, means it should follow the flow of the HTML file.
+
+relative;
+	moves the element relative to IT'S OWN ORIGINAL POSITION; so if you say:
+left: 10px; this will move the element 10px to the right.
+
+BUT it DOESN'T REMOVE IT from the flow, it's SPACE is still reserved for it, so nothing else moves at all BUT that element.
+
+absolute;
+	Removes the element COMPLETELY from it's original position, and positions it relative to THE LAST POSITIONED PARENT; if this is an element inside a div, it will position itself relatively to the whole html element, UNLESS you use a "position" value, changing it from it's original "static" state to something else - like "relative" - this way the element will be positioned relatively to it's parent, the div.
+
+So a "relatively" positioned element can have "absolutely" positioned elements inside of it.
+
+it's not strict to "relative", any position OTHER THAN STATIC works, but usually you'll use relative if you don't actually wanna change the element position, just it's children.
+
+fixed;
+	ALWAYS relative to the HTML element, AND STICKS to it's position if you scroll.
+
+sticky;
+	acts the same way as "relative" UNTIL it hits the border of the screen when you scroll, then it acts like "fixed"
