@@ -10,7 +10,7 @@
 }
 
 :root {
-    /* I didn't use this before, creating variales inside the root dir to use 'em everywhere else, cool */
+    /* I didn't use this before, creating variables inside the root dir to use 'em everywhere else, cool */
     --Soft-blue: hsl(215, 51%, 70%);
     --Cyan: hsl(178, 100%, 50%);
 
@@ -24,7 +24,6 @@
 
 img {
     max-width: 100%;
-    /* NOT width, So far I THINK max-width only used for images? google it/ask */
 }
 
 body {
@@ -43,7 +42,6 @@ body {
 }
 
 .card {
-    /* border: 3px solid red; */
     width: 20rem;
     background-color: var(--card-bg);
     padding: 1.4rem;
@@ -59,6 +57,7 @@ body {
 .card ul {
     /* remove the dots */
     list-style-type: none;
+
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
